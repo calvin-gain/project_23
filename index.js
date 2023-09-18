@@ -10,8 +10,6 @@ app.get('/', (req, res) => {
   res.send('Hello, it`s aws test');
 });
 
- console.log('app test')
-
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Aws test app listening on port ${port}`);
