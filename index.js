@@ -1,16 +1,16 @@
-require("dotenv").config(); 
-const express = require('express')
-const app = express()
+require('dotenv').config();
+const express = require('express');
+const app = express();
 
-const { initDbConnection } = require('./mongodb.js')
+const {initDbConnection} = require('./mongodb.js');
 
-initDbConnection()
+initDbConnection();
 
 app.get('/', (req, res) => {
-    res.send('Hello, it`s aws test')
-})
+  res.send('Hello, it`s aws test');
+});
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log(`Aws test app listening on port ${port}`)
-})
+  console.log(`Aws test app listening on port ${port}`);
+});
